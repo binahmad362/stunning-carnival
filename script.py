@@ -6,7 +6,7 @@ import os
 import keyboard
 
 # Enable failsafe - move mouse to top-left corner to abort
-pyautogui.FAILSAFE = True
+pyautogui.FAILSAFE = False
 
 # Download and read the numbers file
 def download_numbers_file():
@@ -334,107 +334,117 @@ def process_numbers(country_name, country_code, numbers):
 
 def main():
     # Open MuMu_Installer.exe without blocking
-    # print("Opening MuMu_Installer.exe...")
-    # subprocess.Popen("MuMu_Installer.exe")
+    print("Opening MuMu_Installer.exe...")
+    subprocess.Popen("MuMu_Installer.exe")
 
-    # # Wait 3 seconds for the installer to load
-    # print("Waiting 3 seconds for installer to load...")
-    # time.sleep(3)
+    # Wait 3 seconds for the installer to load
+    print("Waiting 3 seconds for installer to load...")
+    time.sleep(3)
 
-    # # Look for the install.png image on screen
-    # print("Searching for install.png on screen...")
-    # install_location = pyautogui.locateOnScreen('install.png', confidence=0.8)
-    # install_center = pyautogui.center(install_location)
-    # print(f"Found install.png at: {install_location}")
-    # print(f"Clicking at center: X: {install_center.x}, Y: {install_center.y}")
-    # pyautogui.click(install_center)
-    # print("Successfully clicked the install button!")
+    # Look for the install.png image on screen
+    print("Searching for install.png on screen...")
+    install_location = pyautogui.locateOnScreen('install.png', confidence=0.8)
+    install_center = pyautogui.center(install_location)
+    print(f"Found install.png at: {install_location}")
+    print(f"Clicking at center: X: {install_center.x}, Y: {install_center.y}")
+    pyautogui.click(install_center)
+    print("Successfully clicked the install button!")
 
-    # # Wait for installation to complete
-    # print("Waiting for installation to complete...")
-    # time.sleep(70)
+    # Wait for installation to complete
+    print("Waiting for installation to complete...")
+    time.sleep(70)
 
-    # # Click option.png
-    # print("Searching for option.png on screen...")
-    # option_location = pyautogui.locateOnScreen('option.png', confidence=0.8)
-    # option_center = pyautogui.center(option_location)
-    # print(f"Found option.png at: {option_location}")
-    # print(f"Clicking at center: X: {option_center.x}, Y: {option_center.y}")
-    # pyautogui.click(option_center)
-    # print("Successfully clicked option.png!")
+    # Click option.png
+    print("Searching for option.png on screen...")
+    option_location = pyautogui.locateOnScreen('option.png', confidence=0.8)
+    option_center = pyautogui.center(option_location)
+    print(f"Found option.png at: {option_location}")
+    print(f"Clicking at center: X: {option_center.x}, Y: {option_center.y}")
+    pyautogui.click(option_center)
+    print("Successfully clicked option.png!")
 
-    # # Wait a moment for options to load
-    # time.sleep(5)
+    # Wait a moment for options to load
+    time.sleep(5)
 
-    # # Click backup_restore.png
-    # print("Searching for backup_restore.png on screen...")
-    # backup_restore_location = pyautogui.locateOnScreen('backup_restore.png', confidence=0.8)
-    # backup_restore_center = pyautogui.center(backup_restore_location)
-    # print(f"Found backup_restore.png at: {backup_restore_location}")
-    # print(f"Clicking at center: X: {backup_restore_center.x}, Y: {backup_restore_center.y}")
-    # pyautogui.click(backup_restore_center)
-    # print("Successfully clicked backup_restore.png!")
+    # Click backup_restore.png
+    print("Searching for backup_restore.png on screen...")
+    backup_restore_location = pyautogui.locateOnScreen('backup_restore.png', confidence=0.8)
+    backup_restore_center = pyautogui.center(backup_restore_location)
+    print(f"Found backup_restore.png at: {backup_restore_location}")
+    print(f"Clicking at center: X: {backup_restore_center.x}, Y: {backup_restore_center.y}")
+    pyautogui.click(backup_restore_center)
+    print("Successfully clicked backup_restore.png!")
 
-    # # Wait a moment for backup/restore options to load
-    # time.sleep(5)
+    # Wait a moment for backup/restore options to load
+    time.sleep(5)
 
-    # # Click restore.png
-    # print("Searching for restore.png on screen...")
-    # restore_location = pyautogui.locateOnScreen('restore.png', confidence=0.8)
-    # restore_center = pyautogui.center(restore_location)
-    # print(f"Found restore.png at: {restore_location}")
-    # print(f"Clicking at center: X: {restore_center.x}, Y: {restore_center.y}")
-    # pyautogui.click(restore_center)
-    # print("Successfully clicked restore.png!")
+    # Click restore.png
+    print("Searching for restore.png on screen...")
+    restore_location = pyautogui.locateOnScreen('restore.png', confidence=0.8)
+    restore_center = pyautogui.center(restore_location)
+    print(f"Found restore.png at: {restore_location}")
+    print(f"Clicking at center: X: {restore_center.x}, Y: {restore_center.y}")
+    pyautogui.click(restore_center)
+    print("Successfully clicked restore.png!")
 
-    # # Wait for restore dialog to load
-    # time.sleep(5)
+    # Wait for restore dialog to load
+    time.sleep(5)
 
-    # # Click change_directory.png
-    # print("Searching for change_directory.png on screen...")
-    # change_directory_location = pyautogui.locateOnScreen('change_directory.png', confidence=0.8)
-    # change_directory_center = pyautogui.center(change_directory_location)
-    # print(f"Found change_directory.png at: {change_directory_location}")
-    # print(f"Clicking at center: X: {change_directory_center.x}, Y: {change_directory_center.y}")
-    # pyautogui.click(change_directory_center)
-    # print("Successfully clicked change_directory.png!")
+    # Click change_directory.png
+    print("Searching for change_directory.png on screen...")
+    change_directory_location = pyautogui.locateOnScreen('change_directory.png', confidence=0.8)
+    change_directory_center = pyautogui.center(change_directory_location)
+    print(f"Found change_directory.png at: {change_directory_location}")
+    print(f"Clicking at center: X: {change_directory_center.x}, Y: {change_directory_center.y}")
+    pyautogui.click(change_directory_center)
+    print("Successfully clicked change_directory.png!")
 
-    # # Wait for directory dialog to load
-    # time.sleep(1)
+    # Wait for directory dialog to load
+    time.sleep(1)
 
-    # # Type the directory path and press Enter
-    # print("Typing directory path...")
-    # pyautogui.write(r'C:\Users\Rdpuser\Desktop\whatsapp')
-    # pyautogui.press('enter')
-    # print("Directory path entered successfully!")
+    # Type the directory path and press Enter
+    print("Typing directory path...")
+    pyautogui.write(r'C:\Users\Rdpuser\Desktop\whatsapp')
+    pyautogui.press('enter')
+    print("Directory path entered successfully!")
 
-    # # Wait for directory to load
-    # time.sleep(5)
+    # Wait for directory to load
+    time.sleep(5)
 
-    # # Double click on mumudata.png
-    # print("Searching for mumudata.png on screen...")
-    # mumudata_location = pyautogui.locateOnScreen('mumudata.png', confidence=0.8)
-    # mumudata_center = pyautogui.center(mumudata_location)
-    # print(f"Found mumudata.png at: {mumudata_location}")
-    # print(f"Double clicking at center: X: {mumudata_center.x}, Y: {mumudata_center.y}")
-    # pyautogui.doubleClick(mumudata_center)
-    # print("Successfully double clicked mumudata.png!")
+    # Double click on mumudata.png
+    print("Searching for mumudata.png on screen...")
+    mumudata_location = pyautogui.locateOnScreen('mumudata.png', confidence=0.8)
+    mumudata_center = pyautogui.center(mumudata_location)
+    print(f"Found mumudata.png at: {mumudata_location}")
+    print(f"Double clicking at center: X: {mumudata_center.x}, Y: {mumudata_center.y}")
+    pyautogui.doubleClick(mumudata_center)
+    print("Successfully double clicked mumudata.png!")
 
-    # # Click start_emulator.png
-    # print("Searching for start_emulator.png on screen...")
-    # start_emulator = pyautogui.locateOnScreen('start_emulator.png', confidence=0.8)
-    # start_emulator_center = pyautogui.center(start_emulator)
-    # print(f"Found start_emulator.png at: {start_emulator}")
-    # print(f"Clicking at center: X: {start_emulator_center.x}, Y: {start_emulator_center.y}")
-    # pyautogui.click(start_emulator_center)
-    # print("Successfully clicked start_emulator.png!")
+
+    time.sleep(5)
+    # Click start_emulator.png
+    print("Searching for start_emulator.png on screen...")
+    start_emulator = pyautogui.locateOnScreen('start_emulator.png', confidence=0.8)
+    start_emulator_center = pyautogui.center(start_emulator)
+    print(f"Found start_emulator.png at: {start_emulator}")
+    print(f"Clicking at center: X: {start_emulator_center.x}, Y: {start_emulator_center.y}")
+    pyautogui.click(start_emulator_center)
+    print("Successfully clicked start_emulator.png!")
+
+
+
+
+
+
 
     # Wait 20 seconds for emulator to start
-    # print("Waiting 20 seconds for emulator to start...")
-    # time.sleep(20)
+    print("Waiting 20 seconds for emulator to start...")
+    time.sleep(60)
 
     # ADB connection and WhatsApp launch with retry logic
-    # print("Attempting to connect to ADB and launch WhatsApp...")
+    print("Attempting to connect to ADB and launch WhatsApp...")
+    # Note: The connect_and_launch_whatsapp function is not defined in your code
+    # You'll need to implement this function or remove this call
     # success = connect_and_launch_whatsapp()
 
     # if not success:
@@ -442,6 +452,31 @@ def main():
     #     return
 
     # Download and read numbers file
+
+    whatsapp_icon = pyautogui.locateOnScreen('whatsapp_icon.png', confidence=0.8)
+    whatsapp_icon = pyautogui.center(whatsapp_icon)
+    print(f"Found whatsapp_icon.png at: {whatsapp_icon}")
+    print(f"Clicking at center: X: {whatsapp_icon.x}, Y: {whatsapp_icon.y}")
+    pyautogui.click(whatsapp_icon)
+    print("Successfully clicked whatsapp_icon.png!")
+
+
+   
+
+
+    time.sleep(5)
+
+
+    print("Searching for first_agree.png on screen...")
+    first_agree = pyautogui.locateOnScreen('first_agree.png', confidence=0.8)
+    first_agree = pyautogui.center(first_agree)
+    print(f"Found start_emulator.png at: {first_agree}")
+    print(f"Clicking at center: X: {first_agree.x}, Y: {first_agree.y}")
+    pyautogui.click(first_agree)
+    print("Successfully clicked first_agree.png!")
+
+    time.sleep(5)
+
     print("Setting up number verification...")
     if not download_numbers_file():
         return
